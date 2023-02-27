@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    function dataFunc(a,b,c,d) {
+      let obj = {
+        parentData : document.querySelector(a),
+        childrnData : document.createElement(b),
+        grandChildren : document.createElement(c),
+        grandChildrenText : d
+
+    }
+    return obj;
+    }
+    let dataForm = dataFunc("#root","ul","li","hello");
+    // root.children[0] = "hello";
+    let tagArray = ["div", "footer", "section"];
+
+    let root = dataForm.parentData;
+    let aa = dataForm.childrnData;
+    root.appendChild(aa);
+    let bb = dataForm.grandChildren;
+    root.appendChild(bb);
+    bb.textContent = dataForm.grandChildrenText; 
+          //리터럴을 걷어내 버림
+
+          
+    </script>
+</body>
+</html>
