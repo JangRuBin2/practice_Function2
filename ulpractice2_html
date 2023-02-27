@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+    } */
+  </style>
+</head>
+
+</style>
+
+<body>
+  <div id="root"></div>
+
+</body>
+<script>
+
+  let root = document.getElementById("root");
+  // root자식으로 div3개 생성
+  let circle = [];
+  for (let i = 0; i < 3; i++) {
+    let temp = document.createElement('div');
+    circle.push(temp);
+    root.appendChild(temp);
+  };
+
+
+
+
+  let a = document.root;
+  console.dir(a);
+
+
+
+
+
+
+
+  // 
+  function setRootData(w, h, bg, dis, jcnt, ali, pos) {
+    let obj = {
+      WIDTH: w,
+      HEIGHT: h,
+      BGCOLOR: bg,
+      DIS: dis,
+      JCNT: jcnt,
+      ALITEM: ali,
+      POS: pos
+    }
+
+    return obj
+  }
+
+  console.dir(root);
+  // 데이터 출처?
+  function styleElement(element, style) {
+    element.style.width = style.WIDTH;
+    element.style.height = style.HEIGHT;
+    element.style.backgroundColor = style.BGCOLOR;
+    element.style.display = style.DIS;
+    element.style.justifyContent = style.JCNT;
+    element.style.alignItems = style.ALITEM;
+    element.style.position = style.POS;
+  }
+
+  // 공용 css 데이터(body, *)
+
+  let rootData = setRootData("100vw", "100vh", "cadetblue", "flex", "center", "center", "relative")
+  styleElement(root, rootData);
+
+  console.dir(root);
+
+
+
+
+  // 
+  function createCircleStyle (mt, ml, bg, fuck, wt, ht) {
+    let obj = {
+      
+      MT: mt,
+      ML: ml,
+      BG: bg,
+      F: fuck,
+      WI : wt,
+      HE : ht,
+    }
+
+    return obj;
+  }
+
+  function styleCircle(circle, style) {
+    
+    circle.style.marginTop = style.MT
+    circle.style.marginLeft = style.ML
+    circle.style.backgroundColor = style.BG
+    circle.style.filter = style.F
+    circle.style.width = style.WI
+    circle.style.height = style.HE
+
+  }
+
+
+  let CS1 = createCircleStyle("300px", "300px", "salmon", "blur(20px)", "500px", "500px");
+
+  let CS2 = createCircleStyle("50px", "-50px", "cornflowerblue", "blur(20px)","500px", "500px");
+
+  let CS3 = createCircleStyle("-100px", "50px", "coral", "blur(10px)","500px", "500px");
+
+  styleCircle(circle[0], CS1);
+  styleCircle(circle[1], CS2);
+  styleCircle(circle[2], CS3);
+
+  let divBasic = {
+    width: "500px",
+    height: "500px",
+    borderradius: "250px",
+    opacity: "0.8",
+
+    position: absolute,
+  }
+
+
+
+  circle[2].addEventListener("click", function click() {
+    circle[2].style.backgroundColor = 'red';
+  });
+
+
+
+
+
+</script>
+
+</html>

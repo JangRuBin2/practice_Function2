@@ -10,18 +10,42 @@
   <div id="root"></div>
   <script>
     let root = document.getElementById('root');
-    let ul = document.createElement('ul');
-    root.appendChild(ul);
-    let li = document.createElement('li');
-    ul.appendChild(li);
-    li.textContent = "암호화 해보자";
+    
 
-    let dataBox {
-      parent = document.getElementById('root'),
-      children = document.createElement('ul'),
-      chilchildren = document.createElement('li'), 
+    for(let i=0; i<3; i++) {
+      let div = document.createElement('div');
+      div.textContent = (i+1)+"번째";
+      root.appendChild(div);
+      
+
+    }
+    // 매개변수를 담은 임시 저장소 생성
+    function divStyleData(W,H,BGC) {
+
+      let List = {
+
+      width : W,
+      heigt : H,
+      bgColor : BGC
       
     }
+    // 선언과 동시에 사라지지 않게 return
+      return divStyleData;
+    };
+    // 내가 선택이 가능한 css 종류 -> 메뉴판
+    function divStyleMenu(children,style) {
+      children.style.width = style.W
+      children.style.heigt = style.H
+      children.style.bgColor = style.BGC
+    };
+
+    // 내가 메뉴 고름
+    let styleSelect = divStyleData("100vw","100vh","blue");
+    // 주문
+    divStyleMenu(root, styleSelect);
+
+
+    
   </script>
 </body>
 </html>
