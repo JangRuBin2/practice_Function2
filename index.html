@@ -26,7 +26,14 @@
     let weeks = ["월요일 오늘", "수요일 쉼", "금요일 놀자", "대머리", "빡빡이", "풍성이", "풍성출"];
     let colorChange = [red, black, gray];
    
-    let counter = 0;
+    let count = 0;
+    rootStyle.addEventListener("click", function() {
+      rootStyle = colorChange[count];
+      count = count + 1;
+      if(count >= weeks.length) {
+        count= 0;
+    });
+
     rootElement.addEventListener("click", function(){
       // 클릭 했을 때, 함수를 실행한다
 
