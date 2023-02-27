@@ -160,10 +160,23 @@
 //클릭 이벤트 성공
 // console.dir(circle[2]);
   circle[2].addEventListener("click", function click() {
-    let colorChange = circle[2].style.backgroundColor = 'red';
-    return colorChange;
+    let colorRed = circle[2].style.backgroundColor = 'red';
   });
+  console.dir(circle);
 
+  // 오류는 안 나타나지만 어디선가 잘못 됨
+  circle[1].addEventListener("click", function circleColor(color) {
+    // alert('기모링');
+    let obj = {
+      COL : color   
+    }
+    return obj;
+    function colorStyling(circle,style) {
+      circle.style.backgroundColor = style.COL
+    }
+    let colorChange = circleColor("red");
+    colorStyling(circle[1],circleColor)
+  })
 
 
 
