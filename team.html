@@ -98,8 +98,9 @@
   // 세개의 circle의 공용 css 
   let comCircle = createCommonCircleStyle("500px","500px","250px","0.8","absolute");
 
-  console.dir(root);
-  let addCircle = root.que
+  // console.dir(root);
+
+  // div세개에 css 쳐먹이기
   for(let i=0; i<3; i++) {
     styleCommonCircle(circle[i],comCircle);
   }
@@ -156,10 +157,11 @@
   }
 
 
-//클릭 이벤트 실패
+//클릭 이벤트 성공
 // console.dir(circle[2]);
   circle[2].addEventListener("click", function click() {
-    
+    let colorChange = circle[2].style.backgroundColor = 'red';
+    return colorChange;
   });
 
 
