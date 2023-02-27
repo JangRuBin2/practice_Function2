@@ -37,8 +37,8 @@
   };
 
 
-  let a = document.root;
-  console.dir(a);
+  // let a = document.root;
+  // console.dir(a);
 
   // root 스타일링 
   function setRootData(w, h, bg, dis, jcnt, ali, pos) {
@@ -96,10 +96,14 @@
     circle.style.position = style.POS;
   }
   // 세개의 circle의 공용 css 
-  let comCircle1 = createCommonCircleStyle("500px","500px","250px","0.8","absolute");
+  let comCircle = createCommonCircleStyle("500px","500px","250px","0.8","absolute");
 
+  console.dir(root);
   let addCircle = root.que
-  styleCommonCircle(circle[1],comCircle1);
+  for(let i=0; i<3; i++) {
+    styleCommonCircle(circle[i],comCircle);
+  }
+  
 
 
 
@@ -153,7 +157,7 @@
 
 
 //클릭 이벤트 실패
-console.dir(circle[2]);
+// console.dir(circle[2]);
   circle[2].addEventListener("click", function click() {
     
   });
