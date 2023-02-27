@@ -20,11 +20,8 @@
     
     let rootElement = document.getElementById('root');
     
-    let rootStyle = document.getElementById('root').style;
-    
-    let red = rootStyle.backgroundColor='red';
-    let black = rootStyle.backgroundColor='black';
-    let gray = rootStyle.backgroundColor='gray';
+ 
+    let rootStyle = rootElement.style.backgroundColor;
     
     let weeks = ["월요일 오늘", "수요일 쉼", "금요일 놀자", "대머리", "빡빡이", "풍성이", "풍성출"];
     let colorChange = [red, black, gray];
@@ -33,8 +30,9 @@
     rootElement.addEventListener("click", function(){
       // 클릭 했을 때, 함수를 실행한다
 
+      // 뭔가 이쪽에서 문제 생긴 것 같은데..
       rootElement.textContent = weeks[counter];
-      rootStyle = colorChange[counter];
+      
       // id루트의 문자 내용에 weeks배열에[counter]라는 변수를 집어 넣어줘
 
       counter = counter + 1;
