@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div id="first"></div>
+    <div id="second"></div>
+  </div>  
+  <script>
+    let root = document.getElementById('root');
+    let first = document.getElementById('first');
+    let second = document.getElementById('second');
+
+    // root.style.width = "100px";
+    // root.style.height = "100px";
+    // root.style.border = "1px solid green";
+    // first.style.width = "100px";
+    // first.style.height = "100px";
+    // first.style.border = "1px solid green";
+    // second.style.width = "100px";
+    // second.style.height = "100px";
+    // second.style.border = "1px solid green";
+   
+    
+    // data=[
+    //   10,
+    //   20,
+    //   30,
+    //   40
+    // ]
+    // for()
+    // {
+    //   styleData(element,data[i])
+    // }
+    function styleData(WIDT,HEIGH,BORDE) {
+      let object = {
+        W : WIDT,
+        H : HEIGH,
+        B : BORDE
+      }; return object;
+    };
+    // console.dir(first);
+
+    // let allDivision = [root,first,second]; 배열 스타일은 이런식으로 접근이 안되네용
+    // console.dir(allDivision);
+    function styleSelect(element,style) {
+      element.style.width = style.W
+      element.style.height = style.H
+      element.style.border = style.B
+    };
+    
+    let divOne = styleData("500px", "500px", "1px solid black");
+    let divTwo = styleData("200px", "200px", "1px solid red");
+    let divThree = styleData("200px", "200px", "1px solid green");
+  
+
+    styleSelect(root, divOne);
+    styleSelect(first, divTwo);
+    styleSelect(second, divThree);
+  </script>
+</body>
+
+</html>
