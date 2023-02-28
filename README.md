@@ -28,3 +28,11 @@ styleSelect(속성을 적용할 요소, 암호화 된 style?)
 
 styleSelect(적용 할 element, div숫자)
 함수의 기본은 재사용
+
+23.02.28
+entry-point : ul2.html
+dataFunc라는 함수를 선언하고
+그 안의 object안에 키와 value값을 넣어줬다. 
+키는 단순한 이름으로 지어줬고 value에 '변경될 수 있는'데이터를 a,b,c라는 매개변수에 넣었다.
+그 후 chooseData 라는 변수에 a,b,c에 들어갈 순서대로 데이터를 넣어줬고 dataFunc(chooseData를 했다)
+그런데 console에 넣어본 결과 li 태그 하나만 담겨짐
